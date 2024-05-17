@@ -38,6 +38,7 @@ builder.Services.AddDbContext<ItesrcneOctavoContext>(x => x.UseMySql(connection,
 
 builder.Services.AddTransient(typeof(IRepository<>),typeof(Repository<>));
 builder.Services.AddSingleton<JwtHelper>();
+builder.Services.AddAutoMapper(typeof(AutomapperProfile));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
